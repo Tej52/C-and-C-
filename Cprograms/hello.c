@@ -4,4 +4,5 @@ void main(){
     printf("Enter Your Name :");
     scanf("%s",&name);
     printf("Hello %s",name);
+    printf("ON 7 1 2024");
 }
