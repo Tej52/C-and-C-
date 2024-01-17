@@ -1,25 +1,37 @@
 #include<iostream>
 using namespace std;
-int main(){
-    int num[20],size,temp;
-    cout<<"Enter the number of elements: ";
-    cin>>size;
-    for (int i = 0;i<size;i++){
-        cin>>num[i];
+int main(void){
+    int arr[20],n,temp;
+    cout<<"Enter n: ";
+    cin>>n;
+    for (int i=0;i<n;i++){
+        cout<<"Enter number: ";
+        cin>>arr[i];
     }
-    for(int i=0;i<size;i++){
-        for(int j=0;j<size;j++){
-            if(num[i] < num[j]){
-                temp = num[i];
-                num[i]=num[j];
-                num[j]=temp;
+    for(int i=0;i<n;i++){
+        for(int j=0;j<n;j++){
+            if(arr[i] < arr[j]){
+                temp = arr[i];
+                arr[i] = arr[j];
+                arr[j] = temp;
             }
         }
     }
-    cout<<"Ascending Order: "<<endl;
-    for(int i=0;i<size;i++){
-        cout<<num[i]<<endl;
+    cout<<"Ascending order: "<<endl;
+    for (int i=0;i<n;i++){
+        cout<<arr[i]<<endl;
     }
-
-    return 0;
+    for(int i=0;i<n;i++){
+        for(int j=0;j<n;j++){
+            if(arr[i] > arr[j]){
+                temp = arr[i];
+                arr[i] = arr[j];
+                arr[j] = temp;
+            }
+        }
+    }
+    cout<<"Decending order: "<<endl;
+    for(int i = 0;i<n;i++){
+        cout<<arr[i]<<endl;
+    }
 }
